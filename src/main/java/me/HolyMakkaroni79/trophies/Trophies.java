@@ -1,5 +1,6 @@
 package me.HolyMakkaroni79.trophies;
 
+import me.HolyMakkaroni79.trophies.items.RewardSystem;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Trophies extends JavaPlugin {
@@ -7,6 +8,7 @@ public final class Trophies extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+
 
     }
 
