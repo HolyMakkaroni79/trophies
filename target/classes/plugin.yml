@@ -1,0 +1,5 @@
+name: trophies
+version: '1.0-SNAPSHOT'
+main: me.HolyMakkaroni79.trophies.Trophies
+api-version: '1.21'
+authors: [ HolyMakkaroni79 ]

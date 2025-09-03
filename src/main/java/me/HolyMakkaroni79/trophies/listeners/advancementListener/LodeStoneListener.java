@@ -21,10 +21,10 @@ public class LodeStoneListener implements Listener {
     @EventHandler
     public void onAdvancementDone(PlayerAdvancementDoneEvent event){
         Advancement advancement = event.getAdvancement();
-        String key = advancement.getKey().getKey();
+        NamespacedKey key = advancement.getKey();
         Player player= event.getPlayer();
         this.player = player;
-        if(key.equals(NamespacedKey.minecraft("adventure/use_lodestone"))){
+        if(key.equals(NamespacedKey.minecraft("story/lava_bucket"))){
             getTest();
         }
     }
