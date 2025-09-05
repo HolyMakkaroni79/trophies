@@ -1,0 +1,7 @@
+me\HolyMakkaroni79\trophies\items\ItemClass.class
+me\HolyMakkaroni79\trophies\commands\trophytest.class
+me\HolyMakkaroni79\trophies\Trophies.class
+me\HolyMakkaroni79\trophies\inventory\CustomInventory.class
+me\HolyMakkaroni79\trophies\commands\InventoryOpener.class
+me\HolyMakkaroni79\trophies\items\RewardSystem.class
+me\HolyMakkaroni79\trophies\listeners\advancementListener\LodeStoneListener.class
