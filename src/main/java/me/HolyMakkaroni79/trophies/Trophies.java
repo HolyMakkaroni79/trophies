@@ -1,5 +1,8 @@
 package me.HolyMakkaroni79.trophies;
 
+import me.HolyMakkaroni79.trophies.listeners.advancementListener.ElytraListener;
+import me.HolyMakkaroni79.trophies.listeners.advancementListener.FreeTheEndListener;
+import me.HolyMakkaroni79.trophies.listeners.advancementListener.GateWayListener;
 import me.HolyMakkaroni79.trophies.listeners.advancementListener.LodeStoneListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
@@ -12,7 +15,11 @@ public final class Trophies extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         PluginManager pluginManager = Bukkit.getPluginManager();
-        pluginManager.registerEvents(new LodeStoneListener(), this);    }
+        //pluginManager.registerEvents(new LodeStoneListener(), this);
+        pluginManager.registerEvents(new FreeTheEndListener(), this);
+        pluginManager.registerEvents(new GateWayListener(), this);
+        pluginManager.registerEvents(new ElytraListener(), this);
+    }
 
     @Override
     public void onDisable() {

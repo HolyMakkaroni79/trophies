@@ -1,4 +1,7 @@
 me\HolyMakkaroni79\trophies\items\ItemClass.class
-me\HolyMakkaroni79\trophies\items\RewardSystem.class
-me\HolyMakkaroni79\trophies\listeners\advancementListener\LodeStoneListener.class
+me\HolyMakkaroni79\trophies\listeners\advancementListener\GateWayListener.class
+me\HolyMakkaroni79\trophies\listeners\advancementListener\ElytraListener.class
 me\HolyMakkaroni79\trophies\Trophies.class
+me\HolyMakkaroni79\trophies\items\RewardSystem.class
+me\HolyMakkaroni79\trophies\listeners\advancementListener\FreeTheEndListener.class
+me\HolyMakkaroni79\trophies\listeners\advancementListener\LodeStoneListener.class

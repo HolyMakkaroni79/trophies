@@ -2,9 +2,11 @@ package me.HolyMakkaroni79.trophies.listeners.advancementListener;
 
 import me.HolyMakkaroni79.trophies.items.ItemClass;
 import me.HolyMakkaroni79.trophies.items.RewardSystem;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.advancement.Advancement;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -13,7 +15,9 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.Arrays;
 
-public class LodeStoneListener implements Listener {
+import static org.bukkit.enchantments.Enchantment.UNBREAKING;
+
+public class ElytraListener implements Listener {
     Player player;
 
 
@@ -23,14 +27,17 @@ public class LodeStoneListener implements Listener {
         NamespacedKey key = advancement.getKey();
         Player player= event.getPlayer();
         this.player = player;
-        if(key.equals(NamespacedKey.minecraft("story/lava_bucket"))){
-            getTest();
+        if(key.equals(NamespacedKey.minecraft("end/elytra"))){
+            getDragonSlayer();
         }
     }
-    public ItemStack getTest() {
-        ItemClass test = new ItemClass("test", Material.MUSIC_DISC_OTHERSIDE, Arrays.asList("kuck kuck", "HI"), null, true);
+    public ItemStack getDragonSlayer() {
+        ItemClass test = new ItemClass("the taste of freedom", Material.MUSIC_DISC_OTHERSIDE,
+                Arrays.asList("Now", "fly", "away"), null, true);
 
-        RewardSystem.reward(player, test.build());
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            RewardSystem.reward(player, test.build());
+        }
         return test.build();
     }
 }

@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.Arrays;
 
-public class LodeStoneListener implements Listener {
+public class GateWayListener implements Listener {
     Player player;
 
 
@@ -23,12 +23,12 @@ public class LodeStoneListener implements Listener {
         NamespacedKey key = advancement.getKey();
         Player player= event.getPlayer();
         this.player = player;
-        if(key.equals(NamespacedKey.minecraft("story/lava_bucket"))){
+        if(key.equals(NamespacedKey.minecraft("end/enter_end_gateway"))){
             getTest();
         }
     }
     public ItemStack getTest() {
-        ItemClass test = new ItemClass("test", Material.MUSIC_DISC_OTHERSIDE, Arrays.asList("kuck kuck", "HI"), null, true);
+        ItemClass test = new ItemClass("gateway", Material.MUSIC_DISC_OTHERSIDE, Arrays.asList("You reached for", "new horizons"), null, true);
 
         RewardSystem.reward(player, test.build());
         return test.build();
