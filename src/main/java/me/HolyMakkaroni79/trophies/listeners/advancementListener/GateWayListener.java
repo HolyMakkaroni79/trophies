@@ -28,7 +28,9 @@ public class GateWayListener implements Listener {
         }
     }
     public ItemStack getTest() {
-        ItemClass test = new ItemClass("gateway", Material.MUSIC_DISC_OTHERSIDE, Arrays.asList("You reached for", "new horizons"), null, true);
+        ItemClass test = new ItemClass("gateway", Material.MUSIC_DISC_OTHERSIDE,
+                Arrays.asList("You reached for", "new horizons"),
+                null, true, 7002);
 
         RewardSystem.reward(player, test.build());
         return test.build();

@@ -3,3 +3,13 @@ version: '1.0-SNAPSHOT'
 main: me.HolyMakkaroni79.trophies.Trophies
 api-version: '1.21'
 authors: [ HolyMakkaroni79 ]
+commands:
+  getTrophy:
+    description: To get any Trophy you like
+    usage: /getTrophy [trophyname] [playername]
+    permission: trophy_mod
+
+  permission:
+    trophy_mod:
+      description: Only for mods!
+      default: op

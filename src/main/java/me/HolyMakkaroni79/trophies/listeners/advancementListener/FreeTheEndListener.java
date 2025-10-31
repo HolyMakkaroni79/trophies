@@ -24,18 +24,18 @@ public class FreeTheEndListener implements Listener {
         NamespacedKey key = advancement.getKey();
         Player player= event.getPlayer();
         this.player = player;
-        Bukkit.broadcastMessage("advancement" + key);
         if(key.equals(NamespacedKey.minecraft("end/kill_dragon"))){
             getDragonSlayer();
         }
     }
     public ItemStack getDragonSlayer() {
         ItemClass test = new ItemClass("dragon slayer", Material.MUSIC_DISC_OTHERSIDE,
-                Arrays.asList("You were one of the first people", "who free the end!"), null, true);
+                Arrays.asList("You were one of the first people", "who free the end!"), null,
+                true, 7001);
 
-        for (Player player : Bukkit.getOnlinePlayers()) {
+        //for (Player player : Bukkit.getOnlinePlayers()) {
             RewardSystem.reward(player, test.build());
-        }
+        //}
         return test.build();
     }
 }

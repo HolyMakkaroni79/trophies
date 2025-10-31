@@ -16,15 +16,17 @@ public class ItemClass {
     final List<String> lore;
     final Map<Enchantment, Integer> enchantment;
     final boolean unbreakable;
+    final int customModelData;
 
 
     public ItemClass(String name, Material material, List<String> lore,
-                     Map<Enchantment, Integer> enchantment, boolean unbreakable) {
+                     Map<Enchantment, Integer> enchantment, boolean unbreakable, int customModelData) {
         this.name = name;
         this.material = material;
         this.lore = lore != null ? lore : new ArrayList<>();
         this.enchantment = enchantment;
         this.unbreakable = unbreakable;
+        this.customModelData = customModelData;
     }
 
     public ItemStack build(){
@@ -43,6 +45,10 @@ public class ItemClass {
                     meta.addEnchant(entry.getKey(), entry.getValue(), true);
                 }
             }
+            meta.setCustomModelData(customModelData);
+            item.setItemMeta(meta);
+
+            meta = item.getItemMeta();
             item.setItemMeta(meta);
         }
         return item;

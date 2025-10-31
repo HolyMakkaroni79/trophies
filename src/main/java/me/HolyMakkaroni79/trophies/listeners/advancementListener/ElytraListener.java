@@ -22,22 +22,24 @@ public class ElytraListener implements Listener {
 
 
     @EventHandler
-    public void onAdvancementDone(PlayerAdvancementDoneEvent event){
+    public void onAdvancementDone(PlayerAdvancementDoneEvent event) {
         Advancement advancement = event.getAdvancement();
         NamespacedKey key = advancement.getKey();
-        Player player= event.getPlayer();
+        Player player = event.getPlayer();
         this.player = player;
-        if(key.equals(NamespacedKey.minecraft("end/elytra"))){
+        if (key.equals(NamespacedKey.minecraft("end/elytra"))) {
             getDragonSlayer();
         }
     }
+
     public ItemStack getDragonSlayer() {
         ItemClass test = new ItemClass("the taste of freedom", Material.MUSIC_DISC_OTHERSIDE,
-                Arrays.asList("Now", "fly", "away"), null, true);
+                Arrays.asList("Now", "fly", "away"), null, true, 7003);
 
-        for (Player player : Bukkit.getOnlinePlayers()) {
-            RewardSystem.reward(player, test.build());
-        }
+
+        RewardSystem.reward(player, test.build());
+
+
         return test.build();
     }
 }

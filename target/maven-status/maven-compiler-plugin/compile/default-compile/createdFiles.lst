@@ -1,4 +1,8 @@
+me\HolyMakkaroni79\trophies\commands\TabCompleter.class
 me\HolyMakkaroni79\trophies\items\ItemClass.class
+me\HolyMakkaroni79\trophies\SpecialTrophies\Placeholder.class
+me\HolyMakkaroni79\trophies\SpecialTrophies\CommandTrophies\HalloweenTrophy.class
+me\HolyMakkaroni79\trophies\commands\getTrophy.class
 me\HolyMakkaroni79\trophies\listeners\advancementListener\GateWayListener.class
 me\HolyMakkaroni79\trophies\listeners\advancementListener\ElytraListener.class
 me\HolyMakkaroni79\trophies\Trophies.class

@@ -28,7 +28,7 @@ public class LodeStoneListener implements Listener {
         }
     }
     public ItemStack getTest() {
-        ItemClass test = new ItemClass("test", Material.MUSIC_DISC_OTHERSIDE, Arrays.asList("kuck kuck", "HI"), null, true);
+        ItemClass test = new ItemClass("test", Material.MUSIC_DISC_OTHERSIDE, Arrays.asList("kuck kuck", "HI"), null, true, 7007);
 
         RewardSystem.reward(player, test.build());
         return test.build();
